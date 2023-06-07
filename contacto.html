@@ -26,7 +26,7 @@
    
     </header>
 
-    <form action="xxx.xxx">
+    <form action="./action_page.php">
         <fieldset>
             <h4>Para realizar una consulta completá el siguiente formulario:</h4> 
                 <label for="Nombre">Nombre</label><br>
@@ -45,10 +45,21 @@
 
         <div><label for="consultas"></label>
         <textarea name="consultas" id="consultas" cols="150" rows="9"></textarea></div>
-        <div class="boton"><input type="submit" value="Enviar"></div>
+        <div class="boton" id="btnClick"><input type="submit" value="Enviar" onclick="alert('Su consulta será respondida a la brevedad')"></div>
+        
+        <script>
+          var btnElm = console.log ('btnClick')  
+        pElm.textContent = 0;
+        
+        btnElm.onclick = function(){
+            contar++;
+            pElm.textContent = contar;
+            console.log  btnElm();
+        }
+</script>
 
         <div><h4>Si deseás solicitar un cotización de nuestros servicios, clickee aquí</h4>
-        <input type="submit" value="Cotizar"></div>
+        <input type="submit" value="Cotizar" onclick="alert('Gracias por contactarnos, nos comunicaremos con usted a la brevedad')"></div>
        
         
     </fieldset>
